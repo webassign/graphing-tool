@@ -1,0 +1,659 @@
+.jxgbox {
+    position:relative; /* for IE 7 */
+    overflow:hidden;
+    background-color:#ffffff;
+    border-style:solid;
+    border-width:1px;
+    border-color:#356AA0;
+}
+
+.JXGtext {
+    background-color: transparent; /* May produce artefacts in IE. Solution: setting a color explicitly. */
+    font-family: Arial, Helvetica, Geneva;
+    padding: 0px;
+    margin: 0px;
+    /*line-height:100%;*/ /* This has to be commented out. Otherwise subscripts are not visible in IE */
+    /*border-style:dotted;*/
+    /*border-width:0.4px;*/
+}
+
+.navbar {
+    color: #aaaaaa;
+    background-color: #f5f5f5;
+    padding: 2px;
+    position: absolute;
+    font-size: 10px;
+    cursor: pointer;
+    z-index: 100;
+    right: 5px;
+    bottom: 5px;
+}
+
+.help {
+  padding-top: 112px;
+
+  a {
+    background: url(/static/img/pads/mathpad/helpIcon.png) no-repeat left;
+    font-family: Arial;
+    font-size:10px;
+    color: #666666; 
+    padding: 5px 4px 5px 20px;
+    text-decoration: underline;  
+  }
+}
+
+/*
+ Sprites that stick to the right side of their parent
+ container! This is useful for something like the layers
+ palette, where the icon appears to the right of text.
+ */
+/* line 4, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper {
+  position: relative;
+}
+/* line 8, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper h1, .graph-wrapper h2, .graph-wrapper h3, .graph-wrapper h4, .graph-wrapper h5, .graph-wrapper h6 {
+  margin: 0;
+}
+/* line 12, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container {
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  zoom: 1;
+  width: 528px;
+  background-color: #e1e2df;
+  border: 1px solid #8d8d8d;
+  padding: 8px;
+  margin-bottom: 1em;
+  position: relative;
+  z-index: 10;
+  /*
+   JSXGraph Container
+   */
+  /*
+   Toolbar
+   */
+  /*
+   Logo
+   */
+}
+/* line 9, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container:before, .graph-wrapper .graph-container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 15, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container:after {
+  clear: both;
+}
+/* line 26, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .jxgbox {
+  float: left;
+  margin: 0 8px;
+}
+/* line 34, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar {
+  width: 45px;
+  height: 422px;
+  position: relative;
+  float: left;
+}
+/* line 40, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar > .drawer, .graph-wrapper .graph-container .toolbar > .tool {
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=white, endColorstr=#d4d6d2);
+  background-image: -moz-linear-gradient(center top, white, #d4d6d2);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#d4d6d2));
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  border: 1px solid #333333;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+/* line 105, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar > .drawer:hover, .graph-wrapper .graph-container .toolbar > .tool:hover {
+  background-color: #f2f3f2;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#f2f3f2, endColorstr=#c8cac4);
+  background-image: -moz-linear-gradient(center top, #f2f3f2, #c8cac4);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f2f3f2), to(#c8cac4));
+}
+/* line 109, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar > .drawer.selected, .graph-wrapper .graph-container .toolbar > .drawer.on, .graph-wrapper .graph-container .toolbar > .tool.selected, .graph-wrapper .graph-container .toolbar > .tool.on {
+  background-color: #4a76a9;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#4a76a9, endColorstr=#0b213d);
+  background-image: -moz-linear-gradient(center top, #4a76a9, #0b213d);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4a76a9), to(#0b213d));
+}
+/* line 44, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer {
+  -moz-transition-property: width;
+  -webkit-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -moz-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: relative;
+  z-index: 100;
+}
+/* line 51, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open.two {
+  width: 84px;
+}
+/* line 52, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open.three {
+  width: 126px;
+}
+/* line 53, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open.four {
+  width: 168px;
+}
+/* line 58, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open .tool.horizontal-parabola label:hover, .graph-wrapper .graph-container .toolbar .drawer.open .tool.horizontal-parabola a:hover {
+  background-position: -84px -546px;
+}
+/* line 63, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open .tool.line label:hover, .graph-wrapper .graph-container .toolbar .drawer.open .tool.line a:hover {
+  background-position: -84px -42px;
+}
+/* line 68, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open .tool.ray label:hover, .graph-wrapper .graph-container .toolbar .drawer.open .tool.ray a:hover {
+  background-position: -84px -462px;
+}
+/* line 73, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open .tool.segment label:hover, .graph-wrapper .graph-container .toolbar .drawer.open .tool.segment a:hover {
+  background-position: -84px -504px;
+}
+/* line 78, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.open .tool.vertical-parabola label:hover, .graph-wrapper .graph-container .toolbar .drawer.open .tool.vertical-parabola a:hover {
+  background-position: -84px -126px;
+}
+/* line 84, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.disabled {
+  background-color: #828679;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#828679, endColorstr=#222320);
+  background-image: -moz-linear-gradient(center top, #828679, #222320);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#828679), to(#222320));
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer.disabled .tool.disabled {
+  background-color: transparent;
+}
+/* line 89, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer .tool {
+  float: left;
+}
+/* line 92, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer .tool:first-child, .graph-wrapper .graph-container .toolbar .drawer .tool.selected {
+  background-position: 0px -588px;
+  background-image: url(/static/img/pads/graphingtool/tools-sprite.png);
+}
+/* line 96, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer .tool:first-child.selected, .graph-wrapper .graph-container .toolbar .drawer .tool.selected.selected {
+  background-position: -42px -588px;
+}
+/* line 101, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer .tool.quiet label, .graph-wrapper .graph-container .toolbar .drawer .tool.quiet a {
+  background: transparent none;
+}
+/* line 103, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .drawer .tool.selected {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.circle label, .graph-wrapper .graph-container .toolbar .tool.circle a {
+  background-position: 0px -84px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.circle.disabled label, .graph-wrapper .graph-container .toolbar .tool.circle.disabled a, .graph-wrapper .graph-container .toolbar .tool.circle.selected label, .graph-wrapper .graph-container .toolbar .tool.circle.selected a, .graph-wrapper .graph-container .toolbar .tool.circle.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.circle.not-implemented a {
+  background-position: -42px -84px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.clear label, .graph-wrapper .graph-container .toolbar .tool.clear a {
+  background-position: 0px -294px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.clear.disabled label, .graph-wrapper .graph-container .toolbar .tool.clear.disabled a, .graph-wrapper .graph-container .toolbar .tool.clear.selected label, .graph-wrapper .graph-container .toolbar .tool.clear.selected a, .graph-wrapper .graph-container .toolbar .tool.clear.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.clear.not-implemented a {
+  background-position: -42px -294px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.delete label, .graph-wrapper .graph-container .toolbar .tool.delete a {
+  background-position: 0px -336px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.delete.disabled label, .graph-wrapper .graph-container .toolbar .tool.delete.disabled a, .graph-wrapper .graph-container .toolbar .tool.delete.selected label, .graph-wrapper .graph-container .toolbar .tool.delete.selected a, .graph-wrapper .graph-container .toolbar .tool.delete.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.delete.not-implemented a {
+  background-position: -42px -336px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.fill label, .graph-wrapper .graph-container .toolbar .tool.fill a {
+  background-position: 0px -378px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.fill.disabled label, .graph-wrapper .graph-container .toolbar .tool.fill.disabled a, .graph-wrapper .graph-container .toolbar .tool.fill.selected label, .graph-wrapper .graph-container .toolbar .tool.fill.selected a, .graph-wrapper .graph-container .toolbar .tool.fill.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.fill.not-implemented a {
+  background-position: -42px -378px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.horizontal-parabola label, .graph-wrapper .graph-container .toolbar .tool.horizontal-parabola a {
+  background-position: 0px -546px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.horizontal-parabola.disabled label, .graph-wrapper .graph-container .toolbar .tool.horizontal-parabola.disabled a, .graph-wrapper .graph-container .toolbar .tool.horizontal-parabola.selected label, .graph-wrapper .graph-container .toolbar .tool.horizontal-parabola.selected a, .graph-wrapper .graph-container .toolbar .tool.horizontal-parabola.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.horizontal-parabola.not-implemented a {
+  background-position: -42px -546px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.key label, .graph-wrapper .graph-container .toolbar .tool.key a {
+  background-position: 0px -420px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.key.disabled label, .graph-wrapper .graph-container .toolbar .tool.key.disabled a, .graph-wrapper .graph-container .toolbar .tool.key.selected label, .graph-wrapper .graph-container .toolbar .tool.key.selected a, .graph-wrapper .graph-container .toolbar .tool.key.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.key.not-implemented a {
+  background-position: -42px -420px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.line label, .graph-wrapper .graph-container .toolbar .tool.line a {
+  background-position: 0px -42px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.line.disabled label, .graph-wrapper .graph-container .toolbar .tool.line.disabled a, .graph-wrapper .graph-container .toolbar .tool.line.selected label, .graph-wrapper .graph-container .toolbar .tool.line.selected a, .graph-wrapper .graph-container .toolbar .tool.line.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.line.not-implemented a {
+  background-position: -42px -42px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.no-solution label, .graph-wrapper .graph-container .toolbar .tool.no-solution a {
+  background-position: 0px -210px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.no-solution.disabled label, .graph-wrapper .graph-container .toolbar .tool.no-solution.disabled a, .graph-wrapper .graph-container .toolbar .tool.no-solution.selected label, .graph-wrapper .graph-container .toolbar .tool.no-solution.selected a, .graph-wrapper .graph-container .toolbar .tool.no-solution.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.no-solution.not-implemented a {
+  background-position: -42px -210px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.point label, .graph-wrapper .graph-container .toolbar .tool.point a {
+  background-position: 0px -168px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.point.disabled label, .graph-wrapper .graph-container .toolbar .tool.point.disabled a, .graph-wrapper .graph-container .toolbar .tool.point.selected label, .graph-wrapper .graph-container .toolbar .tool.point.selected a, .graph-wrapper .graph-container .toolbar .tool.point.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.point.not-implemented a {
+  background-position: -42px -168px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.ray label, .graph-wrapper .graph-container .toolbar .tool.ray a {
+  background-position: 0px -462px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.ray.disabled label, .graph-wrapper .graph-container .toolbar .tool.ray.disabled a, .graph-wrapper .graph-container .toolbar .tool.ray.selected label, .graph-wrapper .graph-container .toolbar .tool.ray.selected a, .graph-wrapper .graph-container .toolbar .tool.ray.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.ray.not-implemented a {
+  background-position: -42px -462px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.segment label, .graph-wrapper .graph-container .toolbar .tool.segment a {
+  background-position: 0px -504px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.segment.disabled label, .graph-wrapper .graph-container .toolbar .tool.segment.disabled a, .graph-wrapper .graph-container .toolbar .tool.segment.selected label, .graph-wrapper .graph-container .toolbar .tool.segment.selected a, .graph-wrapper .graph-container .toolbar .tool.segment.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.segment.not-implemented a {
+  background-position: -42px -504px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.selection label, .graph-wrapper .graph-container .toolbar .tool.selection a {
+  background-position: 0px 0px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.selection.disabled label, .graph-wrapper .graph-container .toolbar .tool.selection.disabled a, .graph-wrapper .graph-container .toolbar .tool.selection.selected label, .graph-wrapper .graph-container .toolbar .tool.selection.selected a, .graph-wrapper .graph-container .toolbar .tool.selection.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.selection.not-implemented a {
+  background-position: -42px 0px;
+}
+/* line 82, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.vertical-parabola label, .graph-wrapper .graph-container .toolbar .tool.vertical-parabola a {
+  background-position: 0px -126px;
+}
+/* line 86, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.vertical-parabola.disabled label, .graph-wrapper .graph-container .toolbar .tool.vertical-parabola.disabled a, .graph-wrapper .graph-container .toolbar .tool.vertical-parabola.selected label, .graph-wrapper .graph-container .toolbar .tool.vertical-parabola.selected a, .graph-wrapper .graph-container .toolbar .tool.vertical-parabola.not-implemented label, .graph-wrapper .graph-container .toolbar .tool.vertical-parabola.not-implemented a {
+  background-position: -42px -126px;
+}
+/* line 133, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .tool.not-implemented, .graph-wrapper .graph-container .toolbar .tool.disabled {
+  background-color: #828679;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#828679, endColorstr=#222320);
+  background-image: -moz-linear-gradient(center top, #828679, #222320);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#828679), to(#222320));
+}
+/* line 137, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .tool label, .graph-wrapper .graph-container .toolbar .tool a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url(/static/img/pads/graphingtool/tools-sprite.png);
+  width: 42px;
+  height: 42px;
+  color: #333333;
+  display: block;
+  cursor: pointer;
+}
+/* line 145, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .toolbar .tool label input, .graph-wrapper .graph-container .toolbar .tool a input {
+  display: none;
+}
+/* line 154, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .graph-container .graphing-tool-logo {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  clear: both;
+  position: relative;
+  top: 8px;
+  left: 54px;
+  margin-bottom: 8px;
+  background: url(/static/img/pads/graphingtool/logo.png);
+  width: 146px;
+  height: 13px;
+}
+/* line 167, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette {
+  -moz-transition-property: left;
+  -webkit-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -moz-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  position: absolute;
+  top: 9px;
+  left: 306px;
+}
+/* line 176, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette:hover {
+  left: 316px;
+}
+/* line 183, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette.disabled .endpoint-toggles,
+.graph-wrapper .layer-palette.disabled .property-toggle,
+.graph-wrapper .layer-palette.disabled .graph-tab .layer .delete {
+  display: none;
+}
+/* line 188, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .layer-list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-perspective: 100%;
+  -webkit-backface-visibility: hidden;
+}
+/* line 195, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .layer-list li {
+  margin-left: 0;
+}
+/* line 198, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette.open {
+  left: 542px;
+}
+/* line 201, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette.open .graph-tab h3 {
+  border-bottom: 1px solid #8d8d8d;
+}
+/* line 202, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette.open .graph-tab h3 .toggle {
+  background-position: 100% -84px;
+  background-repeat: no-repeat;
+}
+/* line 204, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette.open .graph-tab h3 .toggle:hover {
+  background-position: 100% -42px;
+  background-repeat: no-repeat;
+}
+/* line 211, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab {
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=white, endColorstr=#d4d6d2);
+  background-image: -moz-linear-gradient(center top, white, #d4d6d2);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#d4d6d2));
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  border: 1px solid #333333;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  max-height: 444px;
+  height: auto;
+  overflow: auto;
+  width: 272px;
+  padding: 0;
+  background-color: #d4d6d2;
+  background-image: none;
+}
+/* line 109, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .layer-palette .graph-tab.selected, .graph-wrapper .layer-palette .graph-tab.on {
+  background-color: #4a76a9;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#4a76a9, endColorstr=#0b213d);
+  background-image: -moz-linear-gradient(center top, #4a76a9, #0b213d);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4a76a9), to(#0b213d));
+}
+/* line 221, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab h3 {
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=white, endColorstr=#d4d6d2);
+  background-image: -moz-linear-gradient(center top, white, #d4d6d2);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#d4d6d2));
+  line-height: 42px;
+  font-weight: bold;
+  height: 42px;
+  padding: 0 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+/* line 230, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab h3 .toggle {
+  background-position: 100% 0px;
+  background-repeat: no-repeat;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  width: 42px;
+  height: 42px;
+  float: right;
+  background-image: url(/static/img/pads/graphingtool/palette-sprite.png);
+}
+/* line 23, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .layer-palette .graph-tab h3 .toggle {
+  *display: inline;
+}
+/* line 241, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer {
+  border-bottom: 1px solid #8d8d8d;
+  font-size: 13px;
+  min-height: 26px;
+  line-height: 26px;
+  padding: 8px;
+  border-top: 1px solid white;
+  position: relative;
+}
+/* line 250, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+/* line 254, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer.blank-slate {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+}
+/* line 259, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer.blank-slate:hover {
+  background-color: inherit;
+}
+/* line 262, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor {
+  border-top: 1px solid #8d8d8d;
+  margin-top: 8px;
+  padding: 4px 0 4px 16px;
+  display: none;
+  position: relative;
+}
+/* line 269, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .attr {
+  padding: 0.75em 0 0;
+}
+/* added to handle conflict by bblackwood */
+#webAssign .graph-wrapper .layer-palette .graph-tab .layer .editor .attr input {
+  font-family: 'Lucida Grande';
+  font-size: 11px;
+}
+/* line 273, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles {
+  position: absolute;
+  top: 15px;
+  left: 180px;
+}
+/* line 277, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles .toggles {
+  margin-bottom: 10px;
+}
+/* line 280, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles .toggler {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  background: url(/static/img/pads/graphingtool/endpoint-toggle-sprite.png);
+  width: 23px;
+  height: 23px;
+  margin-bottom: 7px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+/* line 23, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles .toggler {
+  *display: inline;
+}
+/* line 290, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles .toggler.open {
+  background-position: 0px -23px;
+}
+/* line 292, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles .toggler.open.on {
+  background-position: -23px -23px;
+}
+/* line 295, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles .toggler.closed {
+  background-position: 0px 0px;
+}
+/* line 297, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .endpoint-toggles .toggler.closed.on {
+  background-position: -23px 0px;
+}
+/* line 302, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .property-toggle {
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=white, endColorstr=#d4d6d2);
+  background-image: -moz-linear-gradient(center top, white, #d4d6d2);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#d4d6d2));
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  border: 1px solid #333333;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 1.5em;
+  right: 8px;
+}
+/* line 105, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .property-toggle:hover {
+  background-color: #f2f3f2;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#f2f3f2, endColorstr=#c8cac4);
+  background-image: -moz-linear-gradient(center top, #f2f3f2, #c8cac4);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f2f3f2), to(#c8cac4));
+}
+/* line 109, ../../app/assets/stylesheets/graph_tool/_mixins.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .property-toggle.selected, .graph-wrapper .layer-palette .graph-tab .layer .editor .property-toggle.on {
+  background-color: #4a76a9;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#4a76a9, endColorstr=#0b213d);
+  background-image: -moz-linear-gradient(center top, #4a76a9, #0b213d);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4a76a9), to(#0b213d));
+}
+/* line 306, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .property-toggle .dashed {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-position: 0px -630px;
+  height: 42px;
+  width: 42px;
+  background-image: url(/static/img/pads/graphingtool/tools-sprite.png);
+  display: block;
+}
+/* line 314, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor .property-toggle.on .dashed {
+  background-position: -42px -630px;
+}
+/* line 318, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .editor input[type='number'] {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 0 3px #888888;
+  -webkit-box-shadow: inset 0 0 3px #888888;
+  box-shadow: inner 0 0 3px #888888;
+  border: 1px solid #8d8d8d;
+  padding: 0.4em 0.25em;
+  margin: 0 0.25em;
+  width: 40px;
+}
+/* line 328, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .delete {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-position: 0px 0px;
+  background: url(/static/img/pads/graphingtool/close-button-sprite.png);
+  width: 20px;
+  height: 20px;
+  display: block;
+  z-index: 150;
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  cursor: pointer;
+}
+/* line 341, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .delete:hover {
+  background-position: 0px -20px;
+}
+/* line 346, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer .description {
+  background-position: 0px 0px;
+  cursor: pointer;
+  background-image: url(/static/img/pads/graphingtool/layer-state-sprite.png);
+  background-repeat: no-repeat;
+  padding-left: 24px;
+}
+/* line 354, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer:last-child {
+  border-bottom: 0 none;
+}
+/* line 355, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer.open {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* line 357, ../../app/assets/stylesheets/graph_tool.css.scss */
+.graph-wrapper .layer-palette .graph-tab .layer.open .description {
+  background-position: 0px -22px;
+  font-weight: bold;
+}
